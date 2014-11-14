@@ -1,0 +1,53 @@
+ int x = 198;
+ int y = 300;
+ int val = 1;
+ int R = 255;
+ int G = 255;
+ int B = 255;
+ 
+void setup() {
+  size(1200, 600);
+
+}
+
+void draw() {
+ 
+  background(mouseX, mouseY, 103);
+  
+  fill(mouseX, mouseY, 103);
+  stroke(0);
+  strokeWeight(26);
+
+  ellipse(x,y,370,370);
+  
+  fill(0);
+  ellipse(x,y,200,200);
+  
+    
+    fill(mouseX, mouseY, 103);
+    strokeWeight(0);
+   beginShape(TRIANGLES);
+   vertex (x-140, y-120);
+   vertex (x-25, y-35);
+   vertex (x-90, y -160);
+   
+   vertex (x+100, y+158);
+   vertex (x+40, y+45);
+   vertex (x+140, y+125);
+  
+  vertex (x-140, y+115);
+  vertex (x-60, y+60);
+  vertex (x-105, y+149);
+  endShape();
+  x= x+ val;
+     if (x > width-198) {
+    val= -1;
+  }
+     if (x < 198) {
+    val = 1;
+  }
+
+
+
+println("x value is:" + x);
+}
